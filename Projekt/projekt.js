@@ -160,3 +160,43 @@ function ellenoriz2() {
         }
     }
 }
+function ellenoriz3() {
+    let helyes_valaszok = {
+        "kerdes1": "b",
+        "kerdes2": "a",
+        "kerdes3": "a",
+        "kerdes4": "a",
+        "kerdes5": "c",
+        "kerdes6": "b",
+        "kerdes7": "a",
+        "kerdes8": "b",
+        "kerdes9": "a",
+        "kerdes10": "b"
+    };
+
+    for (let kerdes in helyes_valaszok) {
+        let valaszok = document.getElementsByName(kerdes);
+        let helyes = helyes_valaszok[kerdes];
+        let hibasUzenet = document.getElementById(kerdes + "_hiba");
+
+        let valasztott = false;
+        let helyesValasz = false;
+
+        for (let valasz of valaszok) {
+            if (valasz.checked) {
+                valasztott = true;
+                if (valasz.value === helyes) {
+                    helyesValasz = true;
+                }
+            }
+        }
+
+        if (!valasztott) {
+            hibasUzenet.textContent = "Üres válasz!";
+        } else if (!helyesValasz) {
+            hibasUzenet.textContent = "Hibás válasz!";
+        } else {
+            hibasUzenet.textContent = "A válasz helyes";
+        }
+    }
+}

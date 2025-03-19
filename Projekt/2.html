@@ -7,6 +7,7 @@
     <meta name="author" content="Marosvölgyi Máté">
     <title>A 2-es számrendszerbe váltás alapjai</title>
     <link rel="stylesheet" href="főoldal.css">
+    <script src="projekt.js"></script>
 </head>
 
 <body style="text-align:start">
@@ -44,18 +45,18 @@
             A végeredménynél Ha az első számnál 0-val kezdődik akkor azt elhagyható példa a 2 nél a zárojelezet rész
             (00)10 DE csak akkor ha az első szám, máskor kellenek</p>
     </div>
+    
     <div class="kerdesek">
     <p>AZ első kérdés</p>
-    <p>a) Elosztjuk a számot 2-vel, és a maradékot 1-nek vagy 0-nak írjuk.</p>
-    <label><input type="radio" name="kerdes1" value="a">Elosztjuk a számot 2-vel, és a maradékot 1-nek vagy 0-nak írjuk.</label>
-    <label><input type="radio" name="kerdes1" value="b">Elosztjuk a számot 2-vel, és a maradékot figyelmen kívül hagyjuk.</label>
-    <label><input type="radio" name="kerdes1" value="c">Az eredményt egyszerűen visszafelé írjuk.</label>
-    <label><input type="radio" name="kerdes1" value="d">Az osztott számot 2-vel szorozzuk meg.</label>
+    <p>Igaz Hamis"Ha egy 10 számrendszeri számot 2-be váltom átt, akkor nem kell foglalkozni, hogy páretlan-e"</p>
+    <label><input type="radio" name="kerdes1" value="a">Igaz</label>
+    <label><input type="radio" name="kerdes1" value="b">Hamis</label>
+
     <p id="kerdes1_hiba" class="hibas"></p>
     
     <p>Második kérdés</p>
-    <p>Mi történik, ha egy számot nem lehet tökéletesen elosztani 2-vel a 10-es számrendszerben?</p>
-    <label><input type="radio" name="kerdes2" value="a">A számot át kell alakítani 16-os számrendszerbe.</label>
+    <p>Mi történik, ha egy számot nem lehet tökéletesen elosztani 2-vel a 16-es számrendszerben?</p>
+    <label><input type="radio" name="kerdes2" value="a">Semmi, nem kell osztani.</label>
     <label><input type="radio" name="kerdes2" value="b">A maradékot 1-nek írjuk.</label>
     <label><input type="radio" name="kerdes2" value="c">A maradékot 0-nak írjuk.</label>
     <label><input type="radio" name="kerdes2" value="d">A számot növeljük 1-tel.</label>
@@ -63,25 +64,25 @@
     
     <p>Harmadik kérdés</p>
     <p>Hogyan kell eljárni, amikor 8-as számrendszerből 2-es számrendszerbe váltunk?</p>
-    <label><input type="radio" name="kerdes3" value="a">A számot daraboljuk fel és egyesével váltsuk át 2-es számrendszerbe.</label>
-    <label><input type="radio" name="kerdes3" value="b">Közvetlenül osztjuk a számot 2-vel.</label>
+    <label><input type="radio" name="kerdes3" value="a">A számot 3-val daraboljuk fel és egyesével váltsuk át 2-es számrendszerbe.</label>
+    <label><input type="radio" name="kerdes3" value="b">Osztjuk a számot 2-vel.</label>
     <label><input type="radio" name="kerdes3" value="c">Az összes számjegyet összeadjuk, és az eredményt írjuk át.</label>
-    <label><input type="radio" name="kerdes3" value="d">Az összes számjegyet megfordítjuk.</label>
+    <label><input type="radio" name="kerdes3" value="d">Az számot megfordítjuk.</label>
     <p id="kerdes3_hiba" class="hibas"></p>
     
     <p>Negyedik kérdés</p>
-    <p>Mi az első lépés a 8-as számrendszerű számok 2-es számrendszerbe való átváltásánál?</p>
-    <label><input type="radio" name="kerdes4" value="a">A számot daraboljuk fel a mintának megfelelően.</label>
-    <label><input type="radio" name="kerdes4" value="b">Az összes számjegyet 2-vel szorozzuk meg.</label>
-    <label><input type="radio" name="kerdes4" value="c">A számokat 10-es számrendszerbe váltjuk.</label>
-    <label><input type="radio" name="kerdes4" value="d">A számot 16-os számrendszerbe váltjuk.</label>
+    <p>Mi az értéke a következö számnak:FBI</p>
+    <label><input type="radio" name="kerdes4" value="a">Helytelen a szám</label>
+    <label><input type="radio" name="kerdes4" value="b">373</label>
+    <label><input type="radio" name="kerdes4" value="c">251</label>
+    <label><input type="radio" name="kerdes4" value="d">1266</label>
     <p id="kerdes4_hiba" class="hibas"></p>
     
     <p>Ötödik kérdés</p>
     <p>Miért fontos a számjegyek sorrendjét figyelembe venni a 16-os számrendszerből 2-es számrendszerbe való átváltáskor?</p>
     <label><input type="radio" name="kerdes5" value="a">Mert minden számjegy egy teljes új számot képvisel.</label>
     <label><input type="radio" name="kerdes5" value="b">Mert a számjegyeket visszafelé kell írni.</label>
-    <label><input type="radio" name="kerdes5" value="c">Mert a számjegyek értéke más a számrendszertől függően.</label>
+    <label><input type="radio" name="kerdes5" value="c">Mert csak az első számnál lehet az elején lévő nullákat elhagyni.</label>
     <label><input type="radio" name="kerdes5" value="d">Mert a számjegyeket meg kell fordítani, ha 0-val kezdődnek.</label>
     <p id="kerdes5_hiba" class="hibas"></p>
     
@@ -102,7 +103,7 @@
     <p id="kerdes7_hiba" class="hibas"></p>
     
     <p>Nyolcadik kérdés</p>
-    <p>Melyik számot kell 2-es számrendszerbe váltani a következő hexadecimális számok közül?</p>
+    <p>1100 értéke=?</p>
     <label><input type="radio" name="kerdes8" value="a">2</label>
     <label><input type="radio" name="kerdes8" value="b">C</label>
     <label><input type="radio" name="kerdes8" value="c">A</label>
@@ -110,8 +111,8 @@
     <p id="kerdes8_hiba" class="hibas"></p>
     
     <p>Kilencedik kérdés</p>
-    <p>Hogyan kell kezelni a 2-es számrendszerben, ha egy szám 0-val kezdődik?</p>
-    <label><input type="radio" name="kerdes9" value="a">Az első nullát elhagyhatjuk.</label>
+    <p>Mit teszünk, ha egy szám 0-val kezdődik?</p>
+    <label><input type="radio" name="kerdes9" value="a">Az elején lévő nullát elhagyhatjuk.</label>
     <label><input type="radio" name="kerdes9" value="b">Az első nullát meg kell tartani.</label>
     <label><input type="radio" name="kerdes9" value="c">A nullát csak akkor hagyhatjuk el, ha 16-os számrendszerből van szó.</label>
     <label><input type="radio" name="kerdes9" value="d">A nullát mindig el kell hagyni.</label>
@@ -120,11 +121,11 @@
     <p>Tizedik kérdés</p>
     <p>Hogyan kell a 2-es számrendszerbe váltott számokat összeszerkeszteni a hexadecimális számokból?</p>
     <label><input type="radio" name="kerdes10" value="a">A számjegyeket egyszerűen összerakjuk.</label>
-    <label><input type="radio" name="kerdes10" value="b">Az egyes számjegyeket daraboljuk és a 2-es számrendszerbe váltjuk.</label>
+    <label><input type="radio" name="kerdes10" value="b">Az egyes számjegyeket veszük, és a 2-es számrendszerbe váltjuk.</label>
     <label><input type="radio" name="kerdes10" value="c">Az eredményeket összeadjuk és kerekítjük.</label>
     <label><input type="radio" name="kerdes10" value="d">Az eredményeket összeírjuk, és visszafelé helyezzük őket.</label>
     <p id="kerdes10_hiba" class="hibas"></p>
-    
+    <button type="button" onclick="ellenoriz3()">Ellenőrzés</button>
 </div>
 </body>
 
