@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marosvölgyi Máté">
+    <title>8-as számrendszerbe váltás</title>
+    <link rel="stylesheet" href="főoldal.css">
+    <script src="projekt.js"></script>
+</head>
+
+<body style="text-align:start">
+    <nav>
+        <span class="hivat"><a href="főoldal.html">Fő oldal</a></span>
+        <span class="hivat"><a href="2.html">2-es</a></span>
+        <span class="hivat"><a href="8.html">8-as</a></span>
+        <span class="hivat"><a href="10web.html">10-es</a></span>
+        <span class="hivat"><a href="16web.html">16-os</a></span>
+        <span class="hivat"><a href="projekt.html">Számológép</a></span>
+    </nav>
+    <div id="szöveg">
+        <h1 class="border">Tudj meg többet a 8-as számendszerbe való átváltásról</h1>
+        <h2 class="border1">Minden ami a 8 számrendszerbe való átváltásról tudni kell:</h2>
+
+        <h2 class="border2">10-ből 8-ba:</h2>
+        <p>A számot elosztjuk 8-al és kiírjuk a maradékokat példa 82:8=10 maradék 2; 10:8=1 maradék 2; 1:8=0 maradék 1.
+        </p>
+        <p>Ezútán a maradékokat sorba helyezük, és megforditjuk pl 2,2,1-->122</p>
+        <h2 class="border3">2-ből 8-ba:</h2>
+        <p>
+            A számot feldarabóljuk a minta szerint: 1100110-->1 100 110 jobbról kezdve hármasával osztjuk fel majd a
+        </p>
+        <p> darabokat átváltjuk: </p>
+        <p> 1=1; 100=4; 110=6, így a kapot szám a 146</p>
+        <h2 class="border4">16-ból 8-ba:</h2>
+        <p>
+            A legegyszerőbb ha a számot előszőr 2-es számrendszerbe váljuk át ami megtalál a honlapon. </p>
+        <p>Az így kapot 2-es számredszeri számot a megtanult modon váltjuk át nyolcasba.</p>
+    <p>Itt található egy segéd videó:</p>
+    <div class="video-container">
+        <iframe width="640" height="360" 
+            src="https://www.youtube.com/embed/iUUUz5C8Bbo
+            " 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    </div>
+
+
+    <div class="kerdesek">
+        <p>Tesztek:10 kérdésre tudsz válaszolni a megszerzet tudásod alapján?</p>
+        <p>A teszt nem nehéz bármikor visszatekerhec, és átnézheted mivel a lényeg a tanulás.</p>
+
+        <p>Első kérdés:</p>
+        <p>Hogyan váltjuk át a 10-es számrendszert 8-as számrendszerbe?</p>
+        <label><input type="radio" name="kerdes1" value="a">Elosztjuk 8-cal és kiírjuk a maradékokat.</label>
+        <label><input type="radio" name="kerdes1" value="b">Kiszorozzuk 8-cal és felírjuk a hányadosokat.</label>
+        <label><input type="radio" name="kerdes1" value="c">Elosztjuk 2-vel és csoportosítjuk a számokat.</label>
+        <label><input type="radio" name="kerdes1" value="d">Elosztjuk 10-tel és csoportosítjuk a számokat.</label>
+        <p id="kerdes1_hiba" class="hibas"></p>
+
+        <p>Második kérdés:</p>
+        <p>Mi a lépés, amikor egy számot 8-cal osztunk, és maradékot megkapjuk?</p>
+        <label><input type="radio" name="kerdes2" value="a">A maradékot hozzáadjuk a hányadoshoz.</label>
+        <label><input type="radio" name="kerdes2" value="b">A maradékot felírjuk és elforgatjuk.</label>
+        <label><input type="radio" name="kerdes2" value="c">A maradékot elhagyjuk és folytatjuk a következő
+            osztást.</label>
+        <label><input type="radio" name="kerdes2" value="d">A végén az összes maradékot megfordítjuk és
+            egyesítjük.</label>
+        <p id="kerdes2_hiba" class="hibas"></p>
+
+        <p>Harmadik kérdés:</p>
+        <p>Mi ennek a számnak a 16 számrendszeri értéke, ha 8-as számrendszeri szám: 63528?</p>
+        <label><input type="radio" name="kerdes3" value="a">CEA</label>
+        <label><input type="radio" name="kerdes3" value="b">110011101010</label>
+        <label><input type="radio" name="kerdes3" value="c">Hibás az érték</label>
+        <label><input type="radio" name="kerdes3" value="d">3306</label>
+        <p id="kerdes3_hiba" class="hibas"></p>
+
+        <p>Negyedik kérdés:</p>
+        <p>Mi ennek a számnak a 16 számrendszeri értéke, ha 2-es számrendszeri szám: 100110110?</p>
+        <label><input type="radio" name="kerdes4" value="a">CEA</label>
+        <label><input type="radio" name="kerdes4" value="b">136</label>
+        <label><input type="radio" name="kerdes4" value="c">CFB</label>
+        <label><input type="radio" name="kerdes4" value="d">Hibás az érték</label>
+        <p id="kerdes4_hiba" class="hibas"></p>
+
+        <p>Ötödik kérdés:</p>
+        <p>Hogyan történik a 2-es számrendszerből való átváltás a 16-os számrendszerbe?</p>
+        <label><input type="radio" name="kerdes5" value="a">4-es csoportosítással</label>
+        <label><input type="radio" name="kerdes5" value="b">3-as csoportosítással</label>
+        <label><input type="radio" name="kerdes5" value="c">2-es csoportosítással</label>
+        <label><input type="radio" name="kerdes5" value="d">Nincs szükség csoportosításra</label>
+        <p id="kerdes5_hiba" class="hibas"></p>
+
+        <p>Hatodik kérdés:</p>
+        <p>Melyik karaktert kell használni a 16-os számrendszerben a 10-es értékhez?</p>
+        <label><input type="radio" name="kerdes6" value="a">A</label>
+        <label><input type="radio" name="kerdes6" value="b">B</label>
+        <label><input type="radio" name="kerdes6" value="c">10</label>
+        <label><input type="radio" name="kerdes6" value="d">F</label>
+        <p id="kerdes6_hiba" class="hibas"></p>
+
+        <p>Hetedik kérdés:</p>
+        <p>Mi a 63 értéke, amikor 8-as számrendszerből 16-osba váltunk?</p>
+        <label><input type="radio" name="kerdes7" value="a">51</label>
+        <label><input type="radio" name="kerdes7" value="b">48</label>
+        <label><input type="radio" name="kerdes7" value="c">56</label>
+        <label><input type="radio" name="kerdes7" value="d">63</label>
+        <p id="kerdes7_hiba" class="hibas"></p>
+
+        <p>Nyolcadik kérdés:</p>
+        <p>Milyen módszerrel váltunk át 10-es számrendszerről 16-os számrendszerre?</p>
+        <label><input type="radio" name="kerdes8" value="a">Szorzás és osztás</label>
+        <label><input type="radio" name="kerdes8" value="b">Kivonás</label>
+        <label><input type="radio" name="kerdes8" value="c">Csoportosítás</label>
+        <label><input type="radio" name="kerdes8" value="d">Osztás és maradék</label>
+        <p id="kerdes8_hiba" class="hibas"></p>
+
+        <p>Kilencedik kérdés:</p>
+        <p>Mi történik a 10-nél nagyobb maradékkal az osztás során a 10-es számrendszerből való átváltáskor?</p>
+        <label><input type="radio" name="kerdes9" value="a">Figyelmen kívül hagyjuk</label>
+        <label><input type="radio" name="kerdes9" value="b">Átváltjuk először 2-es számrendszerbe</label>
+        <label><input type="radio" name="kerdes9" value="c">Levonjuk a maradékot</label>
+        <label><input type="radio" name="kerdes9" value="d">A maradékot átváltjuk betűvé</label>
+        <p id="kerdes9_hiba" class="hibas"></p>
+
+        <p>Tizedik kérdés:</p>
+        <p>Mi lesz az eredmény, ha a szám 845?</p>
+        <label><input type="radio" name="kerdes10" value="a">43D</label>
+        <label><input type="radio" name="kerdes10" value="b">34D</label>
+        <label><input type="radio" name="kerdes10" value="c">D34</label>
+        <label><input type="radio" name="kerdes10" value="d">43</label>
+        <p id="kerdes10_hiba" class="hibas"></p>
+
+        <button type="button" onclick="ellenoriz1()">Ellenőrzés</button>
+        </div>
+</body>
+
+</html>

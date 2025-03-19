@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Molnár Barna">
+    <title>10-es_számrendszer</title>
+    <link rel="stylesheet" href="főoldal.css">
+    <script src="projekt.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <span class="hivat"><a href="főoldal.html">Fő oldal</a></span>
+        <span class="hivat"><a href="2.html">2-es</a></span>
+        <span class="hivat"><a href="8.html">8-as</a></span>
+        <span class="hivat"><a href="10web.html">10-es</a></span>
+        <span class="hivat"><a href="16web.html">16-os</a></span>
+        <span class="hivat"><a href="projekt.html">Számológép</a></span>
+    </nav>
+    <h1 class="border" >Minden ami a 10 számrendszerbe való átváltásról tudni kell:</h1>
+    <div id="szöveg">
+        <h2 class="border1">2-ből 10-be:</h2>
+        </p>
+        <p>A számot jobról balra olvasok és leírjuk értékék a végén pedig összeadjuk. Mindig amikor egy másik számra
+            megyünk akkor az a 10 értéke az előző 2 szerese </p>
+        <p>pl: 1101 értéke az első 1 az 1-et ér így +1, a 0 az 1*2 érne ha nem lenne 0 így nem adjuk hozzá,második 1
+            értéke 2*2=4 így +4, harmadik 1 es értéke 4*2=8 így+8</p>
+        <p>végeredmény:1+0+4+8=13</p>
+        </p>
+
+        <h2 class="border2">8-ból 10 be:</h2>
+        <p>A számot jobról balra olvasok és leírjuk értékék a végén pedig összeadjuk.Mindig amikor egy másik számra
+            megyünk akkor az a 10 értéke az előző 8 szorosa:</p>
+        <p>pl 654 értéke 4(a szám)*1(az első mindig 1 szorozok)=4,5(a szám)*8(mert 1*8=8),6(a szám)*64(mert 8*8=64)</p>
+        <p>végeredmény: 4+40+384=428</p>
+        </p>
+        <h2 class="border3">16-ból 10-be:</h2>
+        <p>A számot jobról balra olvasok és leírjuk értékék a végén pedig összeadjuk.Mindig amikor egy másik számra
+            megyünk akkor az a 10 értéke az előző 16 szorosa. Figyeljünk a betük értékére</p>
+        <p>A=10,B=11,C=12,D=13,E=14,F=15</p>
+        <p>pl: A4F értéke F=15*1 , 4*(1*16), A=10*(16*16). </p>
+        <p>végeredmény: 15+64+2560=2639</p>
+        </p>
+    </div>
+    <div class="kerdesek">
+    <p class="Teszt">Tesztek:10 kérdésre tudsz válaszolni a megszerzet tudásod alapján?</p>
+    <p>Első kérdés</p>
+    <p>Mi a 2-es számrendszer alapja?</p>
+    <label><input type="radio" name="kerdes1" value="a">8</label>
+    <label><input type="radio" name="kerdes1" value="b">10</label>
+    <label><input type="radio" name="kerdes1" value="c">16</label>
+    <label><input type="radio" name="kerdes1" value="d">2</label>
+    <p id="kerdes1_hiba" class="hibas"></p>
+    <p>Második kérdés</p>
+    <p>Hogyan kell egy bináris számot decimálissá átváltani?</p>
+    <label><input type="radio" name="kerdes2" value="a">A számot jobbról balra olvasva összeadjuk az értékeket</label>
+    <label><input type="radio" name="kerdes2" value="b">A számot balról jobbra olvasva az értékeket szorozzuk</label>
+    <label><input type="radio" name="kerdes2" value="c">A számot felosztjuk és az összegeket összeadjuk</label>
+    <label><input type="radio" name="kerdes2" value="d">A számot mindkét irányba olvasva szorozzuk az alapokkal</label>
+    <p id="kerdes2_hiba" class="hibas"></p>
+    <p>Harmadik kérdés</p>
+    <p>Mi a helyes kifejezés, ha egy szám átváltása oktálisról binárisra történik?</p>
+    <label><input type="radio" name="kerdes3" value="a">Oktális számot közvetlenül binárisra fordítjuk, minden oktális számjegyet bináris formára írva</label>
+    <label><input type="radio" name="kerdes3" value="b">Oktális számot a 8 alapú számrendszer szabályai szerint kezeljük</label>
+    <label><input type="radio" name="kerdes3" value="c">Oktális számot átalakítjuk hexadecimálissá, majd binárissá</label>
+    <label><input type="radio" name="kerdes3" value="d">Oktális számot bináris formátumban kell mindkét irányban olvasni</label>
+    <p id="kerdes3_hiba" class="hibas"></p>
+    <p>Negyedik kérdés</p>
+    <p>Mi a 16-os számrendszer alapja?</p>
+    <label><input type="radio" name="kerdes4" value="a">16</label>
+    <label><input type="radio" name="kerdes4" value="b">8</label>
+    <label><input type="radio" name="kerdes4" value="c">10</label>
+    <label><input type="radio" name="kerdes4" value="d">2</label>
+    <p id="kerdes4_hiba" class="hibas"></p>
+    <p>Ötödik kérdés</p>
+    <p>Mi a helyes módszer a hexadecimális számok átváltására decimálissá?</p>
+    <label><input type="radio" name="kerdes5" value="a">A hexadecimális számokat csak egyszerűen szorzunk</label>
+    <label><input type="radio" name="kerdes5" value="b">A hexadecimális számok minden egyes karakterét az alap értékének megfelelően szorozzuk, majd összeadjuk</label>
+    <label><input type="radio" name="kerdes5" value="c">A hexadecimális számokat az oktális számrendszer szabályai szerint kezeljük</label>
+    <label><input type="radio" name="kerdes5" value="d">A hexadecimális számokat minden számjegyénél megszorozzuk 16-tól kezdve</label>
+    <p id="kerdes5_hiba" class="hibas"></p>
+    <p>Hatodik kérdés</p>
+    <p>Mi a jelentése a hexadecimális számrendszerben az "F" betűnek?</p>
+    <label><input type="radio" name="kerdes6" value="a">0</label>
+    <label><input type="radio" name="kerdes6" value="b">9</label>
+    <label><input type="radio" name="kerdes6" value="c">16</label>
+    <label><input type="radio" name="kerdes6" value="d">15</label>
+    <p id="kerdes6_hiba" class="hibas"></p>
+    <p>Hetedik kérdés</p>
+    <p>Hogyan történik az oktális számrendszer átváltása binárisra?</p>
+    <label><input type="radio" name="kerdes7" value="a">Az oktális számot közvetlenül binárisra fordítjuk, minden oktális számjegyet bináris formára írva</label>
+    <label><input type="radio" name="kerdes7" value="b">Az oktális számot először decimálissá alakítjuk, majd binárisra</label>
+    <label><input type="radio" name="kerdes7" value="c">Az oktális számot átalakítjuk hexadecimálissá, majd binárissá</label>
+    <label><input type="radio" name="kerdes7" value="d">Oktális számot bináris formátumban kell mindkét irányban olvasni</label>
+    <p id="kerdes7_hiba" class="hibas"></p>
+    <p>Nyolcadik kérdés</p>
+    <p>Mi az alapvető különbség a bináris és a hexadecimális számrendszer között?</p>
+    <label><input type="radio" name="kerdes8" value="a">A bináris számrendszer 2-es alapú, míg a hexadecimális 16-os alapú</label>
+    <label><input type="radio" name="kerdes8" value="b">A hexadecimális számrendszer csak 10 számjegyet használ, míg a bináris 16-ot</label>
+    <label><input type="radio" name="kerdes8" value="c">A bináris számok mindig 8 bit hosszúak, míg a hexadecimális számok rugalmasak</label>
+    <label><input type="radio" name="kerdes8" value="d">Nincs különbség közöttük, csak a jelölés eltérő</label>
+    <p id="kerdes8_hiba" class="hibas"></p>
+    <p>Kilencedik kérdés</p>
+    <p>Miért használják a számítógépek gyakran a bináris számrendszert?</p>
+    <label><input type="radio" name="kerdes9" value="a">Mert könnyebben kifejezhetők a matematikai műveletek</label>
+    <label><input type="radio" name="kerdes9" value="b">Mert a számítógép hardvere a két állapotot (bekapcsolt és kikapcsolt) tudja értelmezni</label>
+    <label><input type="radio" name="kerdes9" value="c">Mert így könnyebb a memória tárolása</label>
+    <label><input type="radio" name="kerdes9" value="d">Mert az bináris kódokat használ</label>
+    <p id="kerdes9_hiba" class="hibas"></p>
+    <p>Tizedik kérdés</p>
+    <p>Mi történik, ha egy 16-os számrendszerről egy 10-es számrendszerbe történik átváltás, és az B karaktert találunk a hexadecimális számban?</p>
+    <label><input type="radio" name="kerdes10" value="a">Az A karakter értéke 11-et jelent</label>
+    <label><input type="radio" name="kerdes10" value="b">Az A karakter értéke 14-et jelent</label>
+    <label><input type="radio" name="kerdes10" value="c">Az A karakter értéke 12-t jelent</label>
+    <label><input type="radio" name="kerdes10" value="d">Az A karakter értéke 15-öt jelent</label>
+    <p id="kerdes10_hiba" class="hibas"></p>
+    <button type="button" onclick="ellenoriz2()">Ellenőrzés</button>
+    </div>
+</body>
+
+</html>

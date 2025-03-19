@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marosvölgyi Máté">
+    <title>A 2-es számrendszerbe váltás alapjai</title>
+    <link rel="stylesheet" href="főoldal.css">
+</head>
+
+<body style="text-align:start">
+    <nav>
+        <span class="hivat"><a href="főoldal.html">Fő oldal</a></span>
+        <span class="hivat"><a href="2.html">2-es</a></span>
+        <span class="hivat"><a href="8.html">8-as</a></span>
+        <span class="hivat"><a href="10web.html">10-es</a></span>
+        <span class="hivat"><a href="16web.html">16-os</a></span>
+        <span class="hivat"><a href="projekt.html">Számológép</a></span>
+    </nav>
+    <div id="szöveg">
+
+
+        <h1 class="border">Tudj meg többet a 2-es számendszerbe való átváltásról</h1>
+        Minden ami a 2 számrendszerbe való átváltásról tudni kell:
+
+        <h2 class="border2">10-ből 2-be:</h2>
+        <p>Egy 10-es számrendszeri számot úgy váltunk át, hogy mindig elosztujk az eredeti számot, és megnézük
+            páratlan-e
+            Ha páratlan a szám, akkor az osztás végén elhadjuk a 0,5-öt, de ha maradék néköl oszható akkor egy 0 irunk.
+            ezután a kopot számláncot megforditjuk és úgy már megkapjuk a kész számot.
+            pl: 18 egyenlő 0 1 0 0 1 kapunk ami visszaforditva 10010 , 1078 egyenlő 0 1 1 0 1 1 0 0 0 0 1 ami
+            megforditva: 10000110110</p>
+
+        <h2 class="border3">8-ból 2-be:</h2>
+        <p>A számot daraboljuk fel kölön részekre a minta szerin:
+            5642----> 5 6 4 2 majd ezeket egyesével írjuk fel 2-es számrendszerbe:
+            5=101 6=110, 4=100 2=010 ami így:101110100010 egyenlő</p>
+        <h2 class="border4">16-ból 2-be</h2>
+        <p>A számot daraboljuk fel kölön részekre a minta szerint:
+            2C87D--> 2 C 8 7 D majd egyesével váltsuk át 2-be. Kis segétség a betük értéke itt található: A=10, B=11
+            C=12 D=13 E=14 F=15
+            2=0010, C(ami 12)=1100, 8=1000, 7=0111, D(ami 13)=1101. A végeredmény pedig:(00)101100100001111101
+            A végeredménynél Ha az első számnál 0-val kezdődik akkor azt elhagyható példa a 2 nél a zárojelezet rész
+            (00)10 DE csak akkor ha az első szám, máskor kellenek</p>
+    </div>
+    <div class="kerdesek">
+    <p>AZ első kérdés</p>
+    <p>a) Elosztjuk a számot 2-vel, és a maradékot 1-nek vagy 0-nak írjuk.</p>
+    <label><input type="radio" name="kerdes1" value="a">Elosztjuk a számot 2-vel, és a maradékot 1-nek vagy 0-nak írjuk.</label>
+    <label><input type="radio" name="kerdes1" value="b">Elosztjuk a számot 2-vel, és a maradékot figyelmen kívül hagyjuk.</label>
+    <label><input type="radio" name="kerdes1" value="c">Az eredményt egyszerűen visszafelé írjuk.</label>
+    <label><input type="radio" name="kerdes1" value="d">Az osztott számot 2-vel szorozzuk meg.</label>
+    <p id="kerdes1_hiba" class="hibas"></p>
+    
+    <p>Második kérdés</p>
+    <p>Mi történik, ha egy számot nem lehet tökéletesen elosztani 2-vel a 10-es számrendszerben?</p>
+    <label><input type="radio" name="kerdes2" value="a">A számot át kell alakítani 16-os számrendszerbe.</label>
+    <label><input type="radio" name="kerdes2" value="b">A maradékot 1-nek írjuk.</label>
+    <label><input type="radio" name="kerdes2" value="c">A maradékot 0-nak írjuk.</label>
+    <label><input type="radio" name="kerdes2" value="d">A számot növeljük 1-tel.</label>
+    <p id="kerdes2_hiba" class="hibas"></p>
+    
+    <p>Harmadik kérdés</p>
+    <p>Hogyan kell eljárni, amikor 8-as számrendszerből 2-es számrendszerbe váltunk?</p>
+    <label><input type="radio" name="kerdes3" value="a">A számot daraboljuk fel és egyesével váltsuk át 2-es számrendszerbe.</label>
+    <label><input type="radio" name="kerdes3" value="b">Közvetlenül osztjuk a számot 2-vel.</label>
+    <label><input type="radio" name="kerdes3" value="c">Az összes számjegyet összeadjuk, és az eredményt írjuk át.</label>
+    <label><input type="radio" name="kerdes3" value="d">Az összes számjegyet megfordítjuk.</label>
+    <p id="kerdes3_hiba" class="hibas"></p>
+    
+    <p>Negyedik kérdés</p>
+    <p>Mi az első lépés a 8-as számrendszerű számok 2-es számrendszerbe való átváltásánál?</p>
+    <label><input type="radio" name="kerdes4" value="a">A számot daraboljuk fel a mintának megfelelően.</label>
+    <label><input type="radio" name="kerdes4" value="b">Az összes számjegyet 2-vel szorozzuk meg.</label>
+    <label><input type="radio" name="kerdes4" value="c">A számokat 10-es számrendszerbe váltjuk.</label>
+    <label><input type="radio" name="kerdes4" value="d">A számot 16-os számrendszerbe váltjuk.</label>
+    <p id="kerdes4_hiba" class="hibas"></p>
+    
+    <p>Ötödik kérdés</p>
+    <p>Miért fontos a számjegyek sorrendjét figyelembe venni a 16-os számrendszerből 2-es számrendszerbe való átváltáskor?</p>
+    <label><input type="radio" name="kerdes5" value="a">Mert minden számjegy egy teljes új számot képvisel.</label>
+    <label><input type="radio" name="kerdes5" value="b">Mert a számjegyeket visszafelé kell írni.</label>
+    <label><input type="radio" name="kerdes5" value="c">Mert a számjegyek értéke más a számrendszertől függően.</label>
+    <label><input type="radio" name="kerdes5" value="d">Mert a számjegyeket meg kell fordítani, ha 0-val kezdődnek.</label>
+    <p id="kerdes5_hiba" class="hibas"></p>
+    
+    <p>Hatodik kérdés</p>
+    <p>Hogyan válthatjuk át a hexadecimális 2C87D számot 2-es számrendszerbe?</p>
+    <label><input type="radio" name="kerdes6" value="a">A számot 16-tal osztjuk.</label>
+    <label><input type="radio" name="kerdes6" value="b">Az egyes számjegyeket 2-es számrendszerbe váltjuk, figyelembe véve a hexadecimális értékeket.</label>
+    <label><input type="radio" name="kerdes6" value="c">A számot a 8-as számrendszerbe váltjuk, majd 2-es számrendszerbe.</label>
+    <label><input type="radio" name="kerdes6" value="d">Közvetlenül 2-es számrendszerbe írjuk a hexadecimális számot.</label>
+    <p id="kerdes6_hiba" class="hibas"></p>
+    
+    <p>Hetedik kérdés</p>
+    <p>Mi a hexadecimális D szám 2-es számrendszerbeli megfelelője?</p>
+    <label><input type="radio" name="kerdes7" value="a">1101</label>
+    <label><input type="radio" name="kerdes7" value="b">1011</label>
+    <label><input type="radio" name="kerdes7" value="c">1001</label>
+    <label><input type="radio" name="kerdes7" value="d">1111</label>
+    <p id="kerdes7_hiba" class="hibas"></p>
+    
+    <p>Nyolcadik kérdés</p>
+    <p>Melyik számot kell 2-es számrendszerbe váltani a következő hexadecimális számok közül?</p>
+    <label><input type="radio" name="kerdes8" value="a">2</label>
+    <label><input type="radio" name="kerdes8" value="b">C</label>
+    <label><input type="radio" name="kerdes8" value="c">A</label>
+    <label><input type="radio" name="kerdes8" value="d">8</label>
+    <p id="kerdes8_hiba" class="hibas"></p>
+    
+    <p>Kilencedik kérdés</p>
+    <p>Hogyan kell kezelni a 2-es számrendszerben, ha egy szám 0-val kezdődik?</p>
+    <label><input type="radio" name="kerdes9" value="a">Az első nullát elhagyhatjuk.</label>
+    <label><input type="radio" name="kerdes9" value="b">Az első nullát meg kell tartani.</label>
+    <label><input type="radio" name="kerdes9" value="c">A nullát csak akkor hagyhatjuk el, ha 16-os számrendszerből van szó.</label>
+    <label><input type="radio" name="kerdes9" value="d">A nullát mindig el kell hagyni.</label>
+    <p id="kerdes9_hiba" class="hibas"></p>
+    
+    <p>Tizedik kérdés</p>
+    <p>Hogyan kell a 2-es számrendszerbe váltott számokat összeszerkeszteni a hexadecimális számokból?</p>
+    <label><input type="radio" name="kerdes10" value="a">A számjegyeket egyszerűen összerakjuk.</label>
+    <label><input type="radio" name="kerdes10" value="b">Az egyes számjegyeket daraboljuk és a 2-es számrendszerbe váltjuk.</label>
+    <label><input type="radio" name="kerdes10" value="c">Az eredményeket összeadjuk és kerekítjük.</label>
+    <label><input type="radio" name="kerdes10" value="d">Az eredményeket összeírjuk, és visszafelé helyezzük őket.</label>
+    <p id="kerdes10_hiba" class="hibas"></p>
+    
+</div>
+</body>
+
+</html>

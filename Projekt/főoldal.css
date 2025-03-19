@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(68, 65, 65);
+
+    text-align: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.border {
+    border: 5px #121212;
+    background-color: rgb(0, 255, 106);
+    text-align: center;
+}
+
+.border1 {
+    border: 5px #121212;
+    background-color: rgb(209, 197, 30);
+    text-align: center;
+}
+
+.border2 {
+    border: 5px #121212;
+    background-color: gray;
+    text-align: center;
+}
+
+.border3 {
+    border: 5px #121212;
+    background-color: #107481;
+    text-align: center;
+}
+
+.border4 {
+
+    border: 5px #121212;
+    background-color: #e0b116;
+    text-align: center;
+}
+
+#szöveg {
+background-color: #1e3a8a;
+    text-align: center;
+}
+
+nav {
+    text-align: center; 
+    background-color: #444; 
+    padding: 10px; 
+}
+
+
+.hivat {
+    display: inline-block; 
+    text-align: center;
+    height: 15px;
+    line-height: 15px;
+    padding: 5px 15px; 
+}
+
+
+.hivat a, .row {
+    text-decoration: none; 
+    color: #f0f0f0;
+    font-weight: bold; 
+    font-size: 14px; 
+    transition: color 0.3s; 
+}
+
+
+.hivat a:hover, .row:hover {
+    color: #ffcc00; 
+}
+label {
+    display: block;
+    text-align: center;
+    background-color: #444; /* Sötétszürke háttér */
+    color: #e0e0e0; /* Világosszürke szöveg, de nem teljesen fehér */
+    font-size: clamp(14px, 2vw, 18px); /* Reszponzív betűméret */
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+.kerdesek{
+    text-align: center; 
+    background-color: #a8d0e6; /* Világoskék */
+}
+.hibas{
+    color: rgb(17, 0, 255);
+    background-color: seagreen;
+    
+}
+button {
+    background-color: #4b86b4;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #3a6d8c;
+  }
+  
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+background-color: #e0b116;
+}

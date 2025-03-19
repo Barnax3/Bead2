@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Molnár Barna, Marosvölgyi Maté">
+    <title>Számrendszer Átváltó</title>
+    <link rel="stylesheet" href="projekt.css">
+    <script src="projekt.js"></script>
+</head>
+
+<body>
+    <span class="hivat"><a href="főoldal.html">Fő oldal</a></span>
+    <span class="hivat"><a href="2.html">2-es</a></span>
+    <span class="hivat"><a href="8.html">8-as</a></span>
+    <span class="hivat"><a href="10web.html">10-es</a></span>
+    <span class="hivat"><a href="16web.html">16-os</a></span>
+    <span class="hivat"><a href="projekt.html">Számológép</a></span>
+    <div class="container">
+        <h2>Számrendszer Átváltó</h2>
+        <input type="text" id="inputNumber" placeholder="Add meg a számot">
+
+        <label for="fromBase">Forrás számrendszer:</label>
+        <select id="fromBase">
+            <option value="2">Bináris (2)</option>
+            <option value="8">Oktális (8)</option>
+            <option value="10" selected>Decimális (10)</option>
+            <option value="16">Hexadecimális (16)</option>
+        </select>
+
+        <label for="toBase">Cél számrendszer:</label>
+        <select id="toBase">
+            <option value="2">Bináris (2)</option>
+            <option value="8">Oktális (8)</option>
+            <option value="10">Decimális (10)</option>
+            <option value="16" selected>Hexadecimális (16)</option>
+        </select>
+
+        <button onclick="convertNumber()">Átváltás</button>
+
+        <h3>Eredmény: <span id="result"></span></h3>
+        <button id="copyButton" onclick="copyToClipboard()">📋 Másolás</button>
+    </div>
+
+
+</body>
+
+</html>
